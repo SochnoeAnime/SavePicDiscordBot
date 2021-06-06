@@ -34,6 +34,6 @@ async def check():
             my = str(todss.month) + "-" + str(todss.year)
             print(todss.year, todss.month)
             for attach in ch.attachments:
-                await attach.save(pathsave + myear + "-" + attach.filename)#file formatting
+                await attach.save(pathsave + myear + "-" + str(ch.id) + ".png")#file formatting
 
 bot.run('token')
